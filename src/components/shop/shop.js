@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Container } from 'reactstrap';
 import RowBlock from '../rowBlock';
 import TextBlock from '../textBlock';
 import ImgBlock from '../imgBlock';
