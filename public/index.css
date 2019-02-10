@@ -5,3 +5,12 @@
 	font-family: 'Merienda';
 	outline: none;
 }
+
+.line {
+	width: 240px;
+	height: 1px;
+	background-color: #000;
+	margin: 0 auto;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
