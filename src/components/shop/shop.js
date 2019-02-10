@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import RowBlock from '../rowBlock';
+import TextBlock from '../textBlock';
 
 import styled from 'styled-components';
 
@@ -107,22 +108,21 @@ const ShopStyle = styled.section`
     }        
 `;
 
-const Shop = () => { 
-    const content = (
-        <>
-        <div className="title">About our beans</div>
-        <img className="beanslogo" src="logo/Beans_logo_dark.svg" alt="Beans logo"/>
-        <div className="shop__text">
-            Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
+const Shop = () => {
+    const text1 = <>
+
+Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
             <br/><br/>
             Afraid at highly months do things on at. Situation recommend objection do intention<br/>
             so questions. <br/>
             As greatly removed calling pleased improve an. Last ask him cold feel<br/>
             met spot shy want. Children me laughing we prospect answered followed. At it went<br/>
-            is song that held help face.
-        </div>
-        </>    
-      )
+            is song that held help face.'
+    </>;
+    
+
+    const content = <TextBlock title='About our beans' textAlign='center' text = {text1}/>
+      
    
     
    const col1 = {
@@ -141,24 +141,6 @@ const Shop = () => {
     <ShopStyle>
         <Container>
             <RowBlock columns = {[col1, col2]}/>
-            {/* <Row>
-                <Col lg={{size: 4, offset: 2}}>
-                    <img className="shop__girl" src="img/coffee_girl.jpg" alt="girl"/>
-                </Col>
-                <Col lg='4'>
-                    <div className="title">About our beans</div>
-                    <img className="beanslogo" src="logo/Beans_logo_dark.svg" alt="Beans logo"/>
-                    <div className="shop__text">
-                        Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
-                        <br/><br/>
-                        Afraid at highly months do things on at. Situation recommend objection do intention<br/>
-                        so questions. <br/>
-                        As greatly removed calling pleased improve an. Last ask him cold feel<br/>
-                        met spot shy want. Children me laughing we prospect answered followed. At it went<br/>
-                        is song that held help face.
-                    </div>
-                </Col>
-            </Row> */}
             <div className="line"></div>
             <Row>
                 <Col lg={{size: 4, offset: 2}}>
