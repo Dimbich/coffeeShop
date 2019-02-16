@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
 const MenuList = styled.ul`
@@ -35,15 +36,15 @@ const Menu = () => {
   return (
     <MenuList>
       <MenuItem>
-        <a href="#">
+        <Link to='/'>
         <img src={process.env.PUBLIC_URL + '/logo/Logo.svg'} alt="logo"/>
-        </a>
+        </Link>
       </MenuItem>
       <MenuItem>
-          <a href="#">Our coffee</a>
+          <Link to='coffee'>Our coffee</Link>
       </MenuItem>
       <MenuItem>
-          <a href="#">For your pleasure</a>
+          <Link to='pleasure'>For your pleasure</Link>
       </MenuItem>
     </MenuList>
   );

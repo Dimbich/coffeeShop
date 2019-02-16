@@ -22,7 +22,7 @@ const ImageBeans = styled.img`
 
 
 const TextBlock = (props) => {
-  const {title, textAlign, isMainPage} = props;
+  const {title, textAlign, isMainPage} = props; 
   return (
     <>
       <Title>{title}</Title>

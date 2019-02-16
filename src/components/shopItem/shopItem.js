@@ -27,15 +27,15 @@ const Item = styled.div`
     } 
 `;
 
-const ShopItem = () => {
+const ShopItem = ({name, url, price, country}) => {
   return(
     <Item>
-      <img src="https://www.sciencenews.org/sites/default/files/main/articles/100315_coffee_opener_NEW_0.jpg" alt="coffee"/>
+      <img src={url} alt={name}/>
       <div>
-          Solimo Coffee Beans 2kg
+          {name}
       </div>
-      <div >Brazil</div>
-      <div >10.73$</div>
+      <div >{country}</div>
+      <div >{price}</div>
     </Item>
   )
 
