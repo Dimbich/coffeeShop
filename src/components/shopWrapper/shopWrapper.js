@@ -5,8 +5,6 @@ import Spinner from '../spinner';
 
 import styled from 'styled-components';
 
-
-
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -49,22 +47,16 @@ export default class ShopWrapper extends Component {
       //console.log('renderItem',arr)
       return arr.map((item ,index) => {
           const {name, url, price,country} = item;
-          //const label = this.props.renderItem(item)||null;
+          console.log(this.props.onItemSelected);
           return (
             <ShopItem
-                key = {index}
+                key = {index}               
                 onClick = {()=>{this.props.onItemSelected(name)}}
                 name = {name}
                 url = {url}
                 price = {price}
                 country = {country}
                 />
-                
-              // <ListGroupItem
-              //     key = {id}
-              //     onClick = {()=>{this.props.onItemSelected(id)}}>
-              //     {label||name}
-              // </ListGroupItem>
           )
       })
   }

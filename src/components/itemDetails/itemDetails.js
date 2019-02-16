@@ -14,8 +14,7 @@ export default class ItemDetails extends Component {
     errMessage: ''
   }
 
-  componentDidMount() {
-    console.log('mount');
+  componentDidMount() {    
       this.updateItem();
   };
 
@@ -25,8 +24,7 @@ export default class ItemDetails extends Component {
       }
   }
 
-  onLoader = (item) =>{
-    console.log(item);
+  onLoader = (item) =>{   
       this.setState({
           item,
           loading:false,
@@ -53,8 +51,7 @@ export default class ItemDetails extends Component {
     // this.foo.bar = 0        
   }
 
-  render() {
-    console.log('render');
+  render() {   
     if (!this.state.item) return null;   
     const {loading, item, error,errMessage} =this.state;
     const {name, country, url, price, description} = item;
@@ -62,8 +59,7 @@ export default class ItemDetails extends Component {
     Country: {country}
     Description: {description}
     Price: {price}
-    </TextBlock>
-  console.log(content1);
+    </TextBlock>  
     const col1 = {
       config: {size: 5, offset: 1},
       content: <ImgBlock alt={name} src={url}/>

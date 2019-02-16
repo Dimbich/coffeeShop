@@ -27,9 +27,9 @@ const Item = styled.div`
     } 
 `;
 
-const ShopItem = ({name, url, price, country}) => {
+const ShopItem = ({name, url, price, country, onClick}) => {
   return(
-    <Item>
+    <Item onClick = {onClick}>
       <img src={url} alt={name}/>
       <div>
           {name}

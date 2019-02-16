@@ -8,6 +8,7 @@ import Filter from '../filter/';
 import ShopWrapper from '../shopWrapper';
 
 import coffeeService from '../../services';
+import {withRouter} from 'react-router-dom';
 
 import styled from 'styled-components';
 
@@ -59,7 +60,7 @@ const ShopStyle = styled.section`
     }        
 `;
 
-export default class Shop extends Component {
+class Shop extends Component {
     coffeeService  = new coffeeService();
 
     render() {
@@ -102,7 +103,12 @@ export default class Shop extends Component {
         config: {size: 10, offset: 1},
         content: <ShopWrapper 
                     getData = {this.coffeeService.getAllItems} 
-                    type='coffee'/>
+                    type='coffee'
+                    onItemSelected = {(name)=>{
+                        console.log('sdfsd');
+                        this.props.history.push(`/coffee/${name}`)
+                    }}    
+                    />
         }  
         return(
             <ShopStyle>
@@ -117,3 +123,4 @@ export default class Shop extends Component {
     }
 }
 
+export default withRouter(Shop);
