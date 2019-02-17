@@ -19,31 +19,37 @@ const MenuItem = styled.li`
       webkit-transform: translateY(3px);                    
     } 
     a {
-        color: #fff; 
+        color: ${props => props.black ? '#000' : '#fff'}; 
         &:visited {
             text-decoration: none;
-            color: #fff;
+            color: ${props => props.black ? '#000' : '#fff'}; 
         }
         &:hover {
             text-decoration: none;
-            color: #fff;
+            color: ${props => props.black ? '#000' : '#fff'}; 
         }    
     }      
 `;
 
 
-const Menu = () => {
+const Menu = ({footer}) => {
+  const isBlack = !!footer;
+  let svgFill = {};
+  if (footer) {
+    svgFill = {filter: "invert(1)"};   
+  }
+  //const svgFill = footer ? {filter: "invert(1)"};
   return (
     <MenuList>
-      <MenuItem>
+      <MenuItem black={isBlack}>
         <Link to='/'>
-        <img src={process.env.PUBLIC_URL + '/logo/Logo.svg'} alt="logo"/>
+          <img src={process.env.PUBLIC_URL + '/logo/Logo.svg'} alt="logo" style={svgFill}/>
         </Link>
       </MenuItem>
-      <MenuItem>
+      <MenuItem black={isBlack}>
           <Link to='/coffee'>Our coffee</Link>
       </MenuItem>
-      <MenuItem>
+      <MenuItem black={isBlack}>
           <Link to='/goods'>For your pleasure</Link>
       </MenuItem>
     </MenuList>
