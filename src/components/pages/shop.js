@@ -104,8 +104,7 @@ class Shop extends Component {
         content: <ShopWrapper 
                     getData = {this.coffeeService.getAllItems} 
                     type='coffee'
-                    onItemSelected = {(name)=>{
-                        console.log('sdfsd');
+                    onItemSelected = {(name)=>{                        
                         this.props.history.push(`/coffee/${name}`)
                     }}    
                     />

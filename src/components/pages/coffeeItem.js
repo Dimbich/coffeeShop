@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import coffeeService from '../../services';
+import CoffeeService from '../../services';
 import ItemDetails from '../itemDetails';
 
 
 class CoffeeItem extends Component {
 
-  coffeeService = new coffeeService();
-
-    render() {      
+  coffeeService = new CoffeeService();   
+    render() {  
+        let {name} = this.props;          
         return (
             <ItemDetails
-                name={this.props.name}
+                name={name}
                 type='coffee'
                 getItem = {this.coffeeService.getItem}/>
             

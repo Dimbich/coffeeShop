@@ -45,7 +45,7 @@ export default class ItemDetails extends Component {
           return;
       }
     //console.log(name);
-    getItem(name, type)
+    getItem(name.replace(/_/g, ' '), type)
           .then(this.onLoader)            
           .catch(this.onError)
     // this.foo.bar = 0        
@@ -56,9 +56,9 @@ export default class ItemDetails extends Component {
     const {loading, item, error,errMessage} =this.state;
     const {name, country, url, price, description} = item;
     const content1 = <TextBlock title="About it" textAlign="left">
-    Country: {country}
-    Description: {description}
-    Price: {price}
+      Country: {country}
+      Description: {description}
+      Price: {price}
     </TextBlock>  
     const col1 = {
       config: {size: 5, offset: 1},
@@ -76,13 +76,13 @@ export default class ItemDetails extends Component {
   
   
     return(
-      <div>
+      <section>
           <Container>
             {errorMessage}
             {spinner}
             {content}      
           </Container>
-      </div>
+      </section>
     )
   }
 }

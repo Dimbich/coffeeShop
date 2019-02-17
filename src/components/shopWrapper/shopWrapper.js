@@ -46,12 +46,11 @@ export default class ShopWrapper extends Component {
   renderItem(arr) {
       //console.log('renderItem',arr)
       return arr.map((item ,index) => {
-          const {name, url, price,country} = item;
-          console.log(this.props.onItemSelected);
+          const {name, url, price,country} = item;         
           return (
             <ShopItem
                 key = {index}               
-                onClick = {()=>{this.props.onItemSelected(name)}}
+                onClick = {()=>{this.props.onItemSelected(name.replace(/ /g,'_'))}}
                 name = {name}
                 url = {url}
                 price = {price}

@@ -41,10 +41,10 @@ const Menu = () => {
         </Link>
       </MenuItem>
       <MenuItem>
-          <Link to='coffee'>Our coffee</Link>
+          <Link to='/coffee'>Our coffee</Link>
       </MenuItem>
       <MenuItem>
-          <Link to='pleasure'>For your pleasure</Link>
+          <Link to='/goods'>For your pleasure</Link>
       </MenuItem>
     </MenuList>
   );
