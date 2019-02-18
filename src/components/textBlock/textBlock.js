@@ -26,7 +26,7 @@ const TextBlock = (props) => {
   return (
     <>
       <Title>{title}</Title>
-      <ImageBeans src={process.env.PUBLIC_URL + 'logo/Beans_logo_dark.svg'} alt="Beans logo"/>
+      <ImageBeans src={process.env.PUBLIC_URL + '/logo/Beans_logo_dark.svg'} alt="Beans logo"/>
       <Text textAlign={textAlign}>{props.children}</Text> 
     </>      
   );

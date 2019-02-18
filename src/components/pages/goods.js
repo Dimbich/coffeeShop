@@ -13,9 +13,9 @@ const Goods = () => {
     content: <ShopWrapper 
                 getData = {new CoffeeService().getAllItems} 
                 type='goods'
-                // onItemSelected = {(name)=>{                        
-                //     this.props.history.push(`/coffee/${name}`)
-                // }}    
+                onItemSelected = {(name)=>{                        
+                    this.props.history.push(`/coffee/${name}`)
+                }}    
                 />
     }  
 
