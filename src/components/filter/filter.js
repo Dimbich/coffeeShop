@@ -33,7 +33,7 @@ const Filter = () => {
 
   const btn = buttons.map(({name, label}) => {
     return (
-      <button key={name}>
+      <button key={name} style={{marginRight:'4px'}}>
         {label}
       </button>
     )

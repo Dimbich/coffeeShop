@@ -62,7 +62,7 @@ export default class ItemDetails extends Component {
     </TextBlock>  
     const col1 = {
       config: {size: 5, offset: 1},
-      content: <ImgBlock alt={name} src={url}/>
+      content: <ImgBlock alt={name} src={url} allWidth/>
     }
   
     const col2 = {

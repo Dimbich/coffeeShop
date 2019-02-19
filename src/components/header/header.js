@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 const Banner = styled.div`
     height: 260px
-    background: url(${process.env.PUBLIC_URL + '/img/Coffee_bg.jpg'}) center center no-repeat
+    background: url(${process.env.PUBLIC_URL + '/img/Goods_bg.jpg'}) center center no-repeat
     background-size: cover;
     .title-big {
       margin-top: 60px;
