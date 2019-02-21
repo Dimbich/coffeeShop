@@ -1,13 +1,15 @@
 import React,  {Component} from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import Menu from '../menu';
+import ImgBlock from '../imgBlock';
+import RowBlock from '../rowBlock';
+
 import {withRouter} from 'react-router-dom';
 
 import styled from 'styled-components';
 
 const Banner = styled.div`
-    height: 260px
-    ${'' /* background: url(${process.env.PUBLIC_URL background}) center center no-repeat */}
+    height: ${props => `${props.height}px`};
     background: ${props => `url(${props.background}) no-repeat center center`};
     background-size: cover;
     .title-big {
@@ -25,24 +27,67 @@ const Banner = styled.div`
 class Header extends Component {
   state = {
     title: '',
-    background: ''
+    content: null,
+    background: '',
+    heightHeader: 0
+  }
+  
+  componentDidMount() {
+    this.setHeader();
   }
 
-  setHeader = () => {
-    const {pathname} = this.props.location;
-    switch (pathname) {
-      case '/':
-        break;
-      default:
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      this.setHeader();
     }
   }
 
 
-  render() {  
-    
-    const {title, background} = this.state;
+  setHeader = () => {
+    let {pathname} = this.props.location;
+    let title;
+    let content;
+    let background;
+
+    pathname = pathname.replace(/^\/+|\/+$/, '');  
+
+    switch (true) {      
+      case (!pathname):       
+        title = 'Everything You Love About Coffee'
+        background ='/img/Main_bg.jpg'
+        content = <>
+            <h1>TEST</h1>
+            <ImgBlock src='logo/Beans_logo.svg' alt='Beans logo' beans/>
+          </>;
+        break;        
+      case /^coffee/.test(pathname):
+        title = pathname.split('/').length === 2 ?  pathname.split('/').pop().replace(/_/g, ' ') :  'Our Coffee'; 
+        background ='/img/Coffee_bg.jpg';  
+        break;
+      case  /^goods$/.test(pathname):
+        title = 'For your pleasure';
+        background ='/img/Goods_bg.jpg';  
+        break;    
+      default:
+        title = 'Page not found';
+        background ='/img/Main_bg.jpg';
+    }
+
+    let heightHeader = !pathname ? 640 : 260;
+
+    this.setState({
+      title,
+      background,
+      heightHeader,
+      content 
+    })
+  } 
+
+  render() {    
+    const {title, content, background, heightHeader} = this.state;
+
     return(
-      <Banner background={background}>
+      <Banner height={heightHeader} background={background}>
         <Container>
           <Row>
             <Col lg='6'>
@@ -52,6 +97,7 @@ class Header extends Component {
             </Col>
           </Row>
           <h1 className="title-big">{title}</h1>
+          {content}
           </Container>
       </Banner>   
     )

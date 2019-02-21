@@ -43,14 +43,16 @@ export default class ShopWrapper extends Component {
       });
   }
 
-  renderItem(arr) {
+  renderItem(arr ,type) {
       //console.log('renderItem',arr)
       return arr.map((item ,index) => {
-          const {name, url, price,country} = item;         
+        
+          const {name, url, price,country} = item; 
+          console.log(name);        
           return (
             <ShopItem
                 key = {index}               
-                onClick = {()=>{this.props.onItemSelected(name.replace(/ /g,'_'))}}
+                onClick = {type !== 'goods' ? ()=>{this.props.onItemSelected(name.replace(/ /g,'_'))} : null}
                 name = {name}
                 url = {url}
                 price = {price}
@@ -62,9 +64,10 @@ export default class ShopWrapper extends Component {
 
   render() {
     const {itemList, loading, error, errMessage} = this.state;
+    const {type} = this.props;
     const errorMessage = error ? <ErrorMessage errorMessage={errMessage}/> : null;
     const spinner =loading ? <Spinner/> : null;
-    const content = !(loading || error) ? this.renderItem(itemList) : null;     
+    const content = !(loading || error) ? this.renderItem(itemList, type) : null;     
     return (
       <Wrapper>
         {errorMessage}
