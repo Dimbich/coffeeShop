@@ -2,7 +2,6 @@ import React,  {Component} from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import Menu from '../menu';
 import ImgBlock from '../imgBlock';
-import RowBlock from '../rowBlock';
 
 import {withRouter} from 'react-router-dom';
 

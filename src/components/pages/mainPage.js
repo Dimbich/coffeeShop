@@ -7,11 +7,28 @@ import CoffeeService from '../../services';
 
 import {withRouter} from 'react-router-dom';
 
+import styled from 'styled-components';
+
+const About = styled.section`
+    padding: 80px 0 110px 0;
+    background-color: #fff;
+`;
+
+const Best = styled.section` 
+    padding: 80px 0 110px 0;
+    background-color: #fff;
+    background: url(../img/paper.jpg) center center no-repeat;
+    background-size: cover;
+    .title {
+    font-size: 24px;
+    text-align: center;
+}
+`;
 
 
 const MainPage = (props) => {
  
-  const col1 = {
+  const mainText = {
     config: {size: 6, offset: 3},
     content:<TextBlock title='About Us' 
         textAlign='center'>
@@ -31,7 +48,7 @@ const MainPage = (props) => {
     </TextBlock>
     }
     
-  const col2 = {
+  const bestSellers = {
       config: {size: 10, offset: 1},
       content: <ShopWrapper 
                   getData = {new CoffeeService().getAllItems} 
@@ -44,10 +61,19 @@ const MainPage = (props) => {
 
 
   return (
-    <Container>
-      <RowBlock columns = {[col1]}/>
-      <RowBlock columns = {[col2]}/>           
-    </Container>
+    <>
+      <About>
+        <Container>
+          <RowBlock columns = {[mainText]}/>                   
+        </Container>
+      </About>
+      <Best> 
+        <Container>
+          <div className='title'>Our best</div>
+          <RowBlock columns = {[bestSellers]}/>           
+        </Container>
+      </Best>
+    </>
   );
 
 }

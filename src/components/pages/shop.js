@@ -79,27 +79,27 @@ class Shop extends Component {
             </>
         </TextBlock>     
        
-        const col1 = {
+        const aboutImg = {
             config: {size: 4, offset: 2},
             content: <ImgBlock alt="girl" src="img/coffee_girl.jpg"/>
         }
 
-        const col2 = {
+        const aboutText = {
         config: {size: 4},
         content
         }
 
-        const col3 = {
+        const search = {
             config: {size: 4, offset: 2},
             content: <SearchPanel/>
         }
 
-        const col4 = {
+        const filter = {
             config: {size: 4},
             content: <Filter/>
         }
 
-        const col5 = {
+        const coffeeItems = {
         config: {size: 10, offset: 1},
         content: <ShopWrapper 
                     getData = {this.coffeeService.getAllItems} 
@@ -112,10 +112,10 @@ class Shop extends Component {
         return(
             <ShopStyle>
                 <Container>
-                    <RowBlock columns = {[col1, col2]}/>
+                    <RowBlock columns = {[aboutImg, aboutText]}/>
                     <div className="line"></div>
-                    <RowBlock columns = {[col3, col4]}/>
-                    <RowBlock columns = {[col5]}/>           
+                    <RowBlock columns = {[search, filter]}/>
+                    <RowBlock columns = {[coffeeItems]}/>           
                 </Container>
             </ShopStyle>
         )

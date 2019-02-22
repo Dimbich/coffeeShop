@@ -6,6 +6,12 @@ import ImgBlock from '../imgBlock';
 import Spinner from '../spinner';
 import ErrorMessage from '../errorMessage';
 
+import styled from 'styled-components';
+
+const ItemDecription = styled.section`
+  padding: 70px 0 40px 0;    
+`;
+
 export default class ItemDetails extends Component {
   state = {
     item: null,
@@ -54,35 +60,33 @@ export default class ItemDetails extends Component {
   render() {   
     if (!this.state.item) return null;   
     const {loading, item, error,errMessage} =this.state;
-    const {name, country, url, price, description} = item;
-    const content1 = <TextBlock title="About it" textAlign="left">
-      Country: {country}
-      Description: {description}
-      Price: {price}
+    const {name, url, ...description} = item;
+    const itemText = <TextBlock title="About it" textAlign="left" item>
+     {description}
     </TextBlock>  
-    const col1 = {
+    const itemImg = {
       config: {size: 5, offset: 1},
       content: <ImgBlock alt={name} src={url} allWidth/>
     }
   
-    const col2 = {
+    const itemDescription = {
     config: {size: 4},
-    content:content1
+    content:itemText
     }
 
     const errorMessage = error ? <ErrorMessage errorMessage={errMessage}/> : null;
     const spinner =loading ? <Spinner/> : null;
-    const content = !(loading || error) ? <RowBlock columns = {[col1, col2]}/> : null;
+    const content = !(loading || error) ? <RowBlock columns = {[itemImg, itemDescription]}/> : null;
   
   
     return(
-      <section>
+      <ItemDecription>
           <Container>
             {errorMessage}
             {spinner}
             {content}      
           </Container>
-      </section>
+      </ItemDecription>
     )
   }
 }

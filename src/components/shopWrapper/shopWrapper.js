@@ -45,10 +45,8 @@ export default class ShopWrapper extends Component {
 
   renderItem(arr ,type) {
       //console.log('renderItem',arr)
-      return arr.map((item ,index) => {
-        
-          const {name, url, price,country} = item; 
-          console.log(name);        
+      return arr.map((item ,index) => {        
+          const {name, url, price,country} = item;                 
           return (
             <ShopItem
                 key = {index}               

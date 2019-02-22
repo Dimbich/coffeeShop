@@ -27,8 +27,8 @@ const Item = styled.div`
     } 
 `;
 
-const ShopItem = ({name, url, price, country, onClick}) => {
-  console.log(name);
+const ShopItem = ({name, url, price, country, onClick, type}) => {
+  
   return(
     <Item onClick = {onClick}>
       <img src={url} alt={name}/>
