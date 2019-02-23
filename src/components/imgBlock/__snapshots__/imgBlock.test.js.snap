@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing <ImgBlock/> ImgBlock have rendrered correctly 1`] = `
+<img
+  className="sc-bdVaJa bwHsYK"
+  src="undefined"
+/>
+`;

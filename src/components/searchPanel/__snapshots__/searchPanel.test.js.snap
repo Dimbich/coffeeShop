@@ -1,0 +1,279 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing <SearchPanel/> Menu have rendrered correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <searchPanel />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "action": "#",
+      "children": Array [
+        <label
+          htmlFor="filter"
+        >
+          Looking for
+        </label>,
+        <input
+          id="filter"
+          onChange={[Function]}
+          placeholder="start typing here..."
+          type="text"
+        />,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Looking for",
+          "htmlFor": "filter",
+        },
+        "ref": null,
+        "rendered": "Looking for",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "id": "filter",
+          "onChange": [Function],
+          "placeholder": "start typing here...",
+          "type": "text",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+    ],
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": true,
+        "rules": Array [
+          "
+  label {
+  margin-right: 20px
+}
+
+ input {.shop__search-label {
+  margin-right: 20px
+}
+
+.shop__search-input {
+  width: 180px;
+  height: 30px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, .25);
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 0 15px
+}
+
+.shop__search-input::-webkit-input-placeholder {
+  text-align: center
+}
+
+.shop__search-input::-ms-input-placeholder {
+  text-align: center
+}
+
+.shop__search-input::placeholder {
+  text-align: center
+}
+  width: 180px;
+  height: 30px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, .25);
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 0 15px
+}
+
+input::-webkit-input-placeholder {
+  text-align: center
+}
+
+input::-ms-input-placeholder {
+  text-align: center
+}
+
+input::placeholder {
+  text-align: center
+}
+",
+        ],
+      },
+      "displayName": "styled.form",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "form",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "action": "#",
+        "children": Array [
+          <label
+            htmlFor="filter"
+          >
+            Looking for
+          </label>,
+          <input
+            id="filter"
+            onChange={[Function]}
+            placeholder="start typing here..."
+            type="text"
+          />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Looking for",
+            "htmlFor": "filter",
+          },
+          "ref": null,
+          "rendered": "Looking for",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "id": "filter",
+            "onChange": [Function],
+            "placeholder": "start typing here...",
+            "type": "text",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+      ],
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bdVaJa",
+          "isStatic": true,
+          "rules": Array [
+            "
+  label {
+  margin-right: 20px
+}
+
+ input {.shop__search-label {
+  margin-right: 20px
+}
+
+.shop__search-input {
+  width: 180px;
+  height: 30px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, .25);
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 0 15px
+}
+
+.shop__search-input::-webkit-input-placeholder {
+  text-align: center
+}
+
+.shop__search-input::-ms-input-placeholder {
+  text-align: center
+}
+
+.shop__search-input::placeholder {
+  text-align: center
+}
+  width: 180px;
+  height: 30px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, .25);
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 0 15px
+}
+
+input::-webkit-input-placeholder {
+  text-align: center
+}
+
+input::-ms-input-placeholder {
+  text-align: center
+}
+
+input::placeholder {
+  text-align: center
+}
+",
+          ],
+        },
+        "displayName": "styled.form",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "sc-bdVaJa",
+        "target": "form",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
