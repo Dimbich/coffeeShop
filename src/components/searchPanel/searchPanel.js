@@ -69,8 +69,7 @@ class searchPanel extends Component {
     return (
       <Search action="#">
         <label htmlFor="filter">Looking for</label>
-        <input t
-          type='text' 
+        <input type='text' 
           id="filter" 
           placeholder="start typing here..."
           onChange={this.onUpdateSearch}

@@ -1,13 +1,11 @@
 import React from 'react';
-import './errorMessage.css';
-import img from './error.jpg';
+import { Alert } from 'reactstrap';
 
 const ErrorMassage = ({errorMessage})=>{
     return (
-        <>
-            <img src={img} alt="error"></img>
-            <span>{errorMessage}</span>
-        </>    
+        <Alert color="danger" className="text-center w-100 mt-5">
+        Something goes wrong.
+      </Alert>   
     )
 }
 
