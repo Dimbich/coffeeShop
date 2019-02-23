@@ -14,7 +14,7 @@ const Goods = () => {
                 getData = {new CoffeeService().getAllItems} 
                 type='goods'
                 onItemSelected = {(name)=>{                        
-                    this.props.history.push(`/coffee/${name}`)
+                    this.props.history.push(`/goods/${name}`)
                 }}    
                 />
     }  

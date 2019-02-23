@@ -61,7 +61,21 @@ const ShopStyle = styled.section`
 `;
 
 class Shop extends Component {
+    state = {
+        term:'',
+        filter:''
+    }
+
     coffeeService  = new coffeeService();
+
+    onUpdateSearch = (term) => {
+        this.setState({term});
+      }
+
+    onFilterSelect = (filter) => {
+        this.setState({filter});
+      }
+    
 
     render() {
         const content = <TextBlock 
@@ -91,12 +105,12 @@ class Shop extends Component {
 
         const search = {
             config: {size: 4, offset: 2},
-            content: <SearchPanel/>
+            content: <SearchPanel onUpdateSearch={this.onUpdateSearch}/>
         }
 
         const filter = {
             config: {size: 4},
-            content: <Filter/>
+            content: <Filter onFilterSelect={this.onFilterSelect}/>
         }
 
         const coffeeItems = {
@@ -104,6 +118,8 @@ class Shop extends Component {
         content: <ShopWrapper 
                     getData = {this.coffeeService.getAllItems} 
                     type='coffee'
+                    term = {this.state.term}
+                    filter = {this.state.filter}
                     onItemSelected = {(name)=>{                        
                         this.props.history.push(`/coffee/${name}`)
                     }}    

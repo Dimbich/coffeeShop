@@ -24,16 +24,19 @@ const ShopFilterGroup = styled.div`
   }
 `;
 
-const Filter = () => {
+const Filter = ({onFilterSelect}) => {
   const buttons=[
     {name: 'brazil', label: 'Brazil'},
     {name: 'kenya', label: 'Kenya'},
     {name: 'columbia', label: 'Columbia'}
   ]
 
-  const btn = buttons.map(({name, label}) => {
+  const btn = buttons.map(({name, label}) => {    
     return (
-      <button key={name} style={{marginRight:'4px'}}>
+      <button 
+        key={name} 
+        style={{marginRight:'4px'}}
+        onClick={() => onFilterSelect(name)}>
         {label}
       </button>
     )

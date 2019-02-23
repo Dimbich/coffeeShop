@@ -55,11 +55,26 @@ input::placeholder {
 `;
 
 class searchPanel extends Component {
+  state = {
+    term:''
+  }
+
+  onUpdateSearch = ({target:{value}}) => {
+    const term = value.toLowerCase();
+    this.setState({term});
+    this.props.onUpdateSearch(term);
+  }
+
   render() {
     return (
       <Search action="#">
         <label htmlFor="filter">Looking for</label>
-        <input type='text' id="filter" placeholder="start typing here..."/>
+        <input t
+          type='text' 
+          id="filter" 
+          placeholder="start typing here..."
+          onChange={this.onUpdateSearch}
+        />
       </Search>
     );
   }
